@@ -365,6 +365,7 @@ sub have_compiler {
         my $cb = ExtUtils::CBuilder->new(quiet=>1);
         $have_compiler = $cb->have_compiler;
     };
+use Test::More; diag 'H_C ', Test::More::explain $@;
     return $have_compiler;
 }
 
